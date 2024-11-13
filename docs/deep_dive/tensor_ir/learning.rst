@@ -165,7 +165,7 @@ a block encompasses more information than standard NumPy code. It comprises a se
     vj = T.axis.spatial(128, j)
     vk = T.axis.reduce(128, k)
 
-The above three lines declare the **key properties** about block axes in the following syntax.
+The above three lines declare the **key properties** about block axes f in the following syntax.
 
 .. code:: python
 
@@ -182,7 +182,7 @@ Block Axis Properties
 ~~~~~~~~~~~~~~~~~~~~~
 Let's delve deeper into the properties of the block axis. These properties signify the axis's
 relationship to the computation in progress. The block comprises three axes ``vi``, ``vj``, and
-``vk``, meanwhile the block reads the buffer ``A[vi, vk]``, ``B[vk, vj]`` and writs the buffer
+``vk``, meanwhile the block reads the buffer ``A[vi, vk]``, ``B[vk, vj]`` and writes the buffer
 ``Y[vi, vj]``. Strictly speaking, the block performs (reduction) updates to Y, which we label
 as write for the time being, as we don't require the value of Y from another block.
 
